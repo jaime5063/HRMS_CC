@@ -1,0 +1,49 @@
+package com.class09;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import com.Utils.CommonMethods;
+
+public class WebTableCalendar_hw2 extends CommonMethods {
+	/*
+	 * Table headers and rows verification Open chrome browser Go to
+	 * “https://www.aa.com/homePage.do” Enter From and To Select departure as May 14
+	 * of 2020 Select arrival as November 8 of 2020 Verify “Choose flights” text is
+	 * displayed Take s screenshot of the results Close browser
+	 */
+	public static void main(String[] args) throws InterruptedException {
+
+		CommonMethods.setUp("chrome", "https://www.aa.com/homePage.do");
+		Thread.sleep(2000);
+		String from = "LAX";
+		String toGo = "Canada";
+		driver.findElement(By.id("aa-lang-en")).sendKeys(from);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@name='destinationAirport']")).sendKeys(toGo);
+		driver.findElement(By.xpath("//input[@id=\'reservationFlightSearchForm.destinationAirport\']"));
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@class='aaDatePicker hasDatepicker'][1]")).click();
+		
+		
+		boolean found = false;
+		while(!found) {
+		String month = "May";
+		List<WebElement> tRow = driver.findElements(By.xpath("//div[@id='ui-datepicker-div']/div/div/div[1]"));
+		for(int i=1; i<tRow.size(); i++) {
+			String title = tRow.get(i-1).getText();
+			
+			if(title.contains(month)) {
+				found=true;
+				System.out.println(title);
+			}	
+		}
+		}
+		
+		
+		
+	}		
+}
+				

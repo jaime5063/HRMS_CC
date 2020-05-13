@@ -1,0 +1,12 @@
+package com.reviewAPI;
+
+import io.restassured.specification.RequestSpecification;
+
+public class GenerateToken {
+
+	public static void main(String[] args) {
+		
+		RequestSpecification request = given()
+		
+	}
+}

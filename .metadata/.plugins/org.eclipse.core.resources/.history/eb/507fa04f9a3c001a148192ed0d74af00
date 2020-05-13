@@ -1,0 +1,44 @@
+package com.OrangeHRMS_File;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.testng.annotations.Test;
+
+import com.hrms.pages.LoginPageElements;
+import com.hrms.pages.OrangeHRMPageElements;
+import com.hrms.utils.CommonMethods;
+
+public class OrangeHRMLoginFILE extends CommonMethods{
+
+	public class PropertyFile {
+
+		Properties prop;
+		
+		@Test
+		public void read() {
+			
+			String filePath = System.getProperty("user.dir")+"/src/test/java/com/OrangeHRMS_File/OrangeHRMS";
+			
+			try {
+				FileInputStream fis = new FileInputStream(filePath);
+				prop=new Properties();
+				prop.load(fis);
+			} catch (FileNotFoundException e) {		
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			String v1 = prop.getProperty("OrangeUser");
+			String v2=prop.getProperty("OrangePass");
+			System.out.println(v1+" "+v2);
+			
+			OrangeHRMPageElements cred = new OrangeHRMPageElements();
+			cred.login(v1, v2);
+			
+		}
+	}
+}
