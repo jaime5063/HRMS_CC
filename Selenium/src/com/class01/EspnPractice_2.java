@@ -7,11 +7,15 @@ public class EspnPractice_2 {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", 
-				"/Users/cesar_directory/eclipse-workspace/TestNGBasics/Drivers/chromedriver");
 		
+		System.out.println("1");
+		System.setProperty("webdriver.chrome.driver", 
+				"/Users/cesar_directory/eclipse-workspace/Selenium/Drivers/chromedriver");
+		
+		System.out.println("2");
 		WebDriver driver = new ChromeDriver();
 		
+		System.out.println("3");
 		driver.get("http://espn.com");
 		
 			Thread.sleep(2000);
