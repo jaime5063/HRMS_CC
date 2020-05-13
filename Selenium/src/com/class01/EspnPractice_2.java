@@ -8,7 +8,7 @@ public class EspnPractice_2 {
 	public static void main(String[] args) throws InterruptedException {
 		
 		System.setProperty("webdriver.chrome.driver", 
-				"/Users/cesar_directory/eclipse-workspace/Selenium/Drivers/chromedriver");
+				"/Users/cesar_directory/eclipse-workspace/TestNGBasics/Drivers/chromedriver");
 		
 		WebDriver driver = new ChromeDriver();
 		
@@ -24,7 +24,7 @@ public class EspnPractice_2 {
 		System.out.println(urlMatch);
 			
 			
-		driver.close();	
+//		driver.close();	
 			
 		
 

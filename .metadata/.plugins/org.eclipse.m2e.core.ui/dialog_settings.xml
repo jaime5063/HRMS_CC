@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/Users/cesar_directory/eclipse-workspace/DataDrivenFramework"/>
 			<item value="/Users/cesar_directory/eclipse-workspace/HRMS"/>
 			<item value="/Users/cesar_directory/eclipse-workspace/HrmsSyntax/pom.xml"/>
 		</list>
@@ -45,14 +46,17 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="HRMS_BDD"/>
 			<item value="com.uproject"/>
 			<item value="khk"/>
 			<item value="com.syntaxTech"/>
 			<item value="com.syntaxTechs"/>
 		</list>
 		<list key="name">
+			<item value="HRMS_CUCUMBER"/>
 		</list>
 		<list key="artifactId">
+			<item value="HRMS_CC"/>
 			<item value="DataDriverFramework"/>
 			<item value="lkjk"/>
 			<item value="HrmsSyntax"/>
